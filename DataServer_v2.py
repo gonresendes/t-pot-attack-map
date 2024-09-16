@@ -10,8 +10,8 @@ from tzlocal import get_localzone
 # Within T-Pot: es = Elasticsearch('http://elasticsearch:9200') and redis_ip = 'map_redis'
 # es = Elasticsearch('http://127.0.0.1:64298')
 # redis_ip = '127.0.0.1'
-es = Elasticsearch('http://elasticsearch:9200')
-redis_ip = 'map_redis'
+es = Elasticsearch(['https://127.0.0.1:9200'], verify_certs=False, basic_auth=('elastic','xxxxx'))
+redis_ip = '127.0.0.1'
 redis_instance = None
 redis_channel = 'attack-map-production'
 version = 'Data Server 2.2.1'
